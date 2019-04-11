@@ -22,6 +22,14 @@ $(call inherit-product, build/target/product/embedded.mk)
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/omni/config/common.mk)
 
+# Charger
+PRODUCT_PACKAGES += \
+    charger_res_images
+
+# Encryption
+PRODUCT_PACKAGES += \
+    libcryptfs_hw
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := sagit
 PRODUCT_NAME := omni_sagit
